@@ -17,7 +17,7 @@
     
     <meta name="viewport" content="width=device-width,
         initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <style>#map_d14af64958454882b0279f2d8e1e46dd {
+    <style>#map_80aaf88b321b4f5fbcc9e0898d303b8a {
         position: relative;
         width: 100.0%;
         height: 100.0%;
@@ -28,7 +28,7 @@
 </head>
 <body>    
     
-    <div class="folium-map" id="map_d14af64958454882b0279f2d8e1e46dd" ></div>
+    <div class="folium-map" id="map_80aaf88b321b4f5fbcc9e0898d303b8a" ></div>
 </body>
 <script>    
     
@@ -36,8 +36,8 @@
         var bounds = null;
     
 
-    var map_d14af64958454882b0279f2d8e1e46dd = L.map(
-        'map_d14af64958454882b0279f2d8e1e46dd', {
+    var map_80aaf88b321b4f5fbcc9e0898d303b8a = L.map(
+        'map_80aaf88b321b4f5fbcc9e0898d303b8a', {
         center: [48.04274, 14.42127],
         zoom: 15,
         maxBounds: bounds,
@@ -49,7 +49,7 @@
 
 
     
-    var tile_layer_b61a0e884c404a00822f497510802477 = L.tileLayer(
+    var tile_layer_c687f7e919c04e8bbe144a841396b619 = L.tileLayer(
         'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
         {
         "attribution": null,
@@ -61,5 +61,39 @@
         "opacity": 1,
         "subdomains": "abc",
         "tms": false
-}).addTo(map_d14af64958454882b0279f2d8e1e46dd);
+}).addTo(map_80aaf88b321b4f5fbcc9e0898d303b8a);
+    
+        var marker_a4e3d59280d746118f50b2f231368957 = L.marker(
+            [48.04274, 14.42127],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_80aaf88b321b4f5fbcc9e0898d303b8a);
+        
+    
+
+                var icon_2cb7e7283cc24057a1f4eca5263a3a6c = L.AwesomeMarkers.icon({
+                    icon: 'futbol-o',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a4e3d59280d746118f50b2f231368957.setIcon(icon_2cb7e7283cc24057a1f4eca5263a3a6c);
+            
+    
+            var popup_7207c243ca1542f388732373cceb56e6 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_190f991bd6b94a9d9a34dc6de9d18c91 = $(`<div id="html_190f991bd6b94a9d9a34dc6de9d18c91" style="width: 100.0%; height: 100.0%;">Info</div>`)[0];
+                popup_7207c243ca1542f388732373cceb56e6.setContent(html_190f991bd6b94a9d9a34dc6de9d18c91);
+            
+
+            marker_a4e3d59280d746118f50b2f231368957.bindPopup(popup_7207c243ca1542f388732373cceb56e6)
+            ;
+
+            
+        
 </script>
