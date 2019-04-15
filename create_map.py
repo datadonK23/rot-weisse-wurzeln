@@ -38,7 +38,7 @@ def get_info(title, description, photo_url):
     <!doctype html>
     <html>
     <h1>{}</h1>""".format(title) + """
-    <iframe width="300" height="200" src='{}'""".format(photo_url) + """ 
+    <iframe width="310" height="210" src='{}'""".format(photo_url) + """ 
     frameborder="0"></iframe>
     <p>{}</p>""".format(description) + """
     </html>"""
@@ -50,7 +50,7 @@ def get_info(title, description, photo_url):
 for _, row in gdf.iterrows():
     iframe = folium.Html(get_info(row["name"], row["text"],
                                   row["photo_url"]), script=True)
-    popup = folium.Popup(iframe, parse_html=True, max_width=500)
+    popup = folium.Popup(iframe, parse_html=True, max_width=350)
 
     folium.Marker(
         location=[row.geometry.y, row.geometry.x],
