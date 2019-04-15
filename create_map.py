@@ -7,7 +7,7 @@ Author: datadonk23
 Date: 14.04.19 
 """
 
-import os, base64
+import os
 import geopandas as gpd
 import folium
 
@@ -24,15 +24,40 @@ f_path = os.path.join(path, f_name)
 gdf = gpd.read_file(f_path)
 
 
+# Render information
+def get_info(title, description, photo_url):
+    """ Generates HTML code for popup
+
+    :param title:
+    :param description: description text < 1001 characters
+    :param photo_url: url of photo (max_width=300px, height=200px)
+    :return: HTML code snippet
+    """
+
+    html = """ 
+    <!doctype html>
+    <html>
+    <h1>{}</h1>""".format(title) + """
+    <iframe width="300" height="200" src='{}'""".format(photo_url) + """ 
+    frameborder="0"></iframe>
+    <p>{}</p>""".format(description) + """
+    </html>"""
+
+    return html
+
+
 # Mark POIs
 for _, row in gdf.iterrows():
+    iframe = folium.Html(get_info(row["name"], row["text"],
+                                  row["photo_url"]), script=True)
+    popup = folium.Popup(iframe, parse_html=True, max_width=500)
+
     folium.Marker(
         location=[row.geometry.y, row.geometry.x],
         tooltip=row["name"],
-        popup=folium.Popup(folium.IFrame("<img src='data:image/jpeg;base64,{}'>".format(base64.b64encode(open(row["photo_url"], "rb").read()).decode()),
-width=350, height=250), max_width=500),
+        popup=popup,
         icon=folium.Icon(color="red", prefix="fa", icon="futbol-o")
-    ).add_to(m) #FIXME heder, text
+    ).add_to(m)
 
 
 # Save map
