@@ -13,7 +13,9 @@ import folium
 
 # Basemap
 m = folium.Map(location=[48.04274, 14.42127], zoom_start=15,
-               tiles="Stamen Toner")
+               tiles="http://tile.stamen.com/toner-background/{z}/{x}/{y}.png",
+               attr="style:<a href=http://maps.stamen.com/toner-background/>Stamen toner-background</a>"
+               )
 
 
 # Data
