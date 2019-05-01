@@ -11,6 +11,7 @@ import os
 from typing import List, NewType
 import geopandas as gpd # type: ignore
 import folium # type: ignore
+from locate_control import LocateControl
 
 
 # Custom types
@@ -23,6 +24,13 @@ m = folium.Map(location=map_center, zoom_start=15,
                tiles="http://tile.stamen.com/toner-background/{z}/{x}/{y}.png",
                attr="style:<a href=http://maps.stamen.com/toner-background/>Stamen toner-background</a>"
                )
+
+
+# Add location tracker
+LocateControl(
+    strings={"title": "Wo bin ich?", "popup": "Du bist hier"},
+    keepCurrentZoomLevel=True
+).add_to(m)
 
 
 # Data
