@@ -6,6 +6,8 @@ Date: 30.04.19
 """
 
 import unittest
+from hypothesis import given
+import hypothesis.strategies as st
 
 from create_map import map_center, loc, get_info
 
@@ -39,14 +41,14 @@ class TestGetInfo(unittest.TestCase):
         self.assertIn("<html>", info, "No html start tag in info")
         self.assertIn("</html>", info, "No html closing tag in info")
 
-    def test_contains_title(self):
-        test_title = "Title Test"
+    @given(test_title=st.text(max_size=40))
+    def test_contains_title(self, test_title):
         info = get_info(test_title, "descr", "url.png")
         self.assertIn("<h1>" + test_title + "</h1>", info,
                       "Test tile not in info")
 
-    def test_contains_description(self):
-        test_descr = "Test description"
+    @given(test_descr=st.text(max_size=1000))
+    def test_contains_description(self, test_descr):
         info = get_info("title", test_descr, "url.jpg")
         self.assertIn("<p>" + test_descr + "</p>", info,
                       "Test description not in info")
@@ -57,9 +59,9 @@ class TestGetInfo(unittest.TestCase):
         self.assertIn("src='" + test_url + "'", info,
                       "Test URL not in info")
 
-    def test_max_len_title(self):
-        long_title = "a" * 41
-        self.assertRaises(ValueError, get_info, long_title, "descr", "url.png")
+    @given(test_title=st.text(min_size=41))
+    def test_max_len_title(self, test_title):
+        self.assertRaises(ValueError, get_info, test_title, "descr", "url.png")
 
     def test_max_len_description(self):
         long_descr = "a" * 1001
