@@ -9,7 +9,9 @@ import unittest
 from hypothesis import given
 import hypothesis.strategies as st
 
-from create_map import map_center, loc, get_info
+import geopandas as gpd
+
+from create_map import map_center, loc, gdf, get_info
 
 
 class TestLocation(unittest.TestCase):
@@ -33,6 +35,29 @@ class TestLocation(unittest.TestCase):
                         "Lat of map center not within city boundaries")
         self.assertTrue(long_min <= center[1] <= long_max,
                         "Long of map center not within city boundaries")
+
+
+class TestData(unittest.TestCase):
+    def test_size(self):
+        data = gdf
+        self.assertEqual(data.shape[0], 10, "Incorrect number of rows in GDF")
+        self.assertEqual(data.shape[1], 5, "Incorrect number of cols in GDF")
+
+    def test_columns(self):
+        data = gdf
+        exp_cols = ["id", "name", "photo_url", "text", "geometry"]
+        cols = list(data.columns.values)
+        self.assertEqual(cols, exp_cols, "Incorrect column names")
+
+    def test_empty_fields(self):
+        data = gdf
+        self.assertEqual(data.isna().sum().sum(), 0,
+                         "There are missing empty fields in GDF")
+
+    def test_geometry(self):
+        data = gdf
+        self.assertIsInstance(data.geometry, gpd.GeoSeries,
+                              "DF geometry type is not a GeoSeries")
 
 
 class TestGetInfo(unittest.TestCase):
