@@ -43,6 +43,16 @@ def get_info(title: str, description: str, photo_url: str) -> Html:
     :return: HTML code snippet
     """
 
+    if len(title) > 40:
+        raise ValueError("Title string is too long")
+    if len(description) > 1000:
+        raise ValueError("Description string is too long")
+    if (".jpg" in photo_url) or (".png" in photo_url):
+        pass
+    else:
+        raise ValueError("Photo URL must point to a .jpg or .png file")
+
+
     html = Html(""" 
     <!doctype html>
     <html>
