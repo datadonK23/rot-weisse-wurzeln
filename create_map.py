@@ -22,7 +22,9 @@ Html = NewType("Html", str)
 map_center: List[float] = [48.04274, 14.42127]
 m = folium.Map(location=map_center, zoom_start=15,
                tiles="http://tile.stamen.com/toner-background/{z}/{x}/{y}.png",
-               attr="style:<a href=http://maps.stamen.com/toner-background/>Stamen toner-background</a>"
+               attr="style:<a "
+                    "href=http://maps.stamen.com/toner-background/>Stamen "
+                    "toner-background</a> | <a href=imprint.html>Impressum</a>"
                )
 
 
