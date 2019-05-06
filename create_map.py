@@ -11,6 +11,7 @@ import os
 from typing import List, NewType
 import geopandas as gpd # type: ignore
 import folium # type: ignore
+from folium import FeatureGroup
 from locate_control import LocateControl
 
 
@@ -37,7 +38,7 @@ LocateControl(
 ).add_to(map)
 
 
-# Data
+# Data imports
 path: str = "data/"
 f_name_points: str = "locations.geojson"
 f_path_points: str = os.path.join(path, f_name_points)
@@ -96,6 +97,8 @@ def get_info(title: str, description: str, photo_url: str) -> Html:
 
 
 # Mark POIs
+fg_points: FeatureGroup = FeatureGroup(name="Stationen", show=True)
+
 for _, row in points_gdf.iterrows():
     iframe = folium.Html(get_info(row["name"], row["text"],
                                   row["photo_url"]), script=True)
@@ -105,8 +108,10 @@ for _, row in points_gdf.iterrows():
     folium.Marker(
         location=loc,
         tooltip=row["name"], popup=popup,
-        icon=folium.Icon(color="red", prefix="fa", icon="futbol-o")
-    ).add_to(map)
+        icon=folium.Icon(color="#d90000", prefix="fa", icon="futbol-o")
+    ).add_to(fg_points)
+
+fg_points.add_to(map)
 
 
 # Layercontrol
