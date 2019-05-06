@@ -11,7 +11,7 @@ import hypothesis.strategies as st
 
 import geopandas as gpd
 
-from create_map import map_center, loc, gdf, get_info
+from create_map import map_center, loc, points_gdf, grounds_ref, get_info
 
 
 class TestLocation(unittest.TestCase):
@@ -37,27 +37,55 @@ class TestLocation(unittest.TestCase):
                         "Long of map center not within city boundaries")
 
 
-class TestData(unittest.TestCase):
+class TestPointData(unittest.TestCase):
+    def setUp(self):
+        self.data = points_gdf
+
     def test_size(self):
-        data = gdf
-        self.assertEqual(data.shape[0], 10, "Incorrect number of rows in GDF")
-        self.assertEqual(data.shape[1], 5, "Incorrect number of cols in GDF")
+        self.assertEqual(self.data.shape[0], 10,
+                         "Incorrect number of rows in point GDF")
+        self.assertEqual(self.data.shape[1], 5,
+                         "Incorrect number of cols in point GDF")
 
     def test_columns(self):
-        data = gdf
         exp_cols = ["id", "name", "photo_url", "text", "geometry"]
-        cols = list(data.columns.values)
-        self.assertEqual(cols, exp_cols, "Incorrect column names")
+        cols = list(self.data.columns.values)
+        self.assertEqual(cols, exp_cols,
+                         "Incorrect column names in point GDF")
 
     def test_empty_fields(self):
-        data = gdf
-        self.assertEqual(data.isna().sum().sum(), 0,
-                         "There are missing empty fields in GDF")
+        self.assertEqual(self.data.isna().sum().sum(), 0,
+                         "There are missing empty fields in point GDF")
 
     def test_geometry(self):
-        data = gdf
+        self.assertIsInstance(self.data.geometry, gpd.GeoSeries,
+                              "Point GDF geometry type is not a GeoSeries")
+
+
+class TestGroundsData(unittest.TestCase):
+    def setUp(self):
+        self.data = gpd.read_file(grounds_ref)
+
+    def test_size(self):
+        self.assertEqual(self.data.shape[0], 2, #FIXME 3
+                         "Incorrect number of rows in grounds GEOJSON")
+        self.assertEqual(self.data.shape[1], 3,
+                         "Incorrect number of cols in grounds GEOJSON")
+
+    def test_columns(self):
+        exp_cols = ["id", "name", "geometry"]
+        cols = list(self.data.columns.values)
+        self.assertEqual(cols, exp_cols,
+                         "Incorrect column names in grounds GEOJSON")
+
+    def test_empty_fields(self):
+        self.assertEqual(self.data.isna().sum().sum(), 0,
+                         "There are missing empty fields in grounds GEOJSON")
+
+    def test_geometry(self):
+        data = points_gdf
         self.assertIsInstance(data.geometry, gpd.GeoSeries,
-                              "DF geometry type is not a GeoSeries")
+                              "Invalid geometry in grounds GEOJSON")
 
 
 class TestGetInfo(unittest.TestCase):

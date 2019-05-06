@@ -20,27 +20,47 @@ Html = NewType("Html", str)
 
 # Basemap
 map_center: List[float] = [48.04274, 14.42127]
-m = folium.Map(location=map_center, zoom_start=15,
-               tiles="http://tile.stamen.com/toner-background/{z}/{x}/{y}.png",
-               attr="style:<a "
-                    "href=http://maps.stamen.com/toner-background/>Stamen "
-                    "toner-background</a> | <a href=imprint.html>Impressum</a>"
-               )
+map: folium.Map = folium.Map(location=map_center, zoom_start=15, tiles=None)
+
+folium.TileLayer(tiles="http://tile.stamen.com/toner-background/{z}/{x}/{y}.png",
+                 attr="style:"
+                      "<a href=http://maps.stamen.com/toner-background/>Stamen "
+                      "toner-background</a> | "
+                      "<a href=imprint.html>Impressum</a>",
+                 name="Basiskarte", show=True).add_to(map)
 
 
 # Add location tracker
 LocateControl(
     strings={"title": "Wo bin ich?", "popup": "Du bist hier"},
     keepCurrentZoomLevel=True
-).add_to(m)
+).add_to(map)
 
 
 # Data
-path = "data/"
-f_name = "locations.geojson"
-f_path = os.path.join(path, f_name)
+path: str = "data/"
+f_name_points: str = "locations.geojson"
+f_path_points: str = os.path.join(path, f_name_points)
 
-gdf: gpd.GeoDataFrame = gpd.read_file(f_path)
+points_gdf: gpd.GeoDataFrame = gpd.read_file(f_path_points)
+
+f_name_grounds: str = "grounds.geojson"
+grounds_ref: str = os.path.join(path,f_name_grounds)
+
+
+# Grounds feature
+folium.GeoJson(
+    grounds_ref,
+    name="Spielstätten",
+    style_function= lambda feature: {
+        "fillColor": "#00ff00", # lime
+        "color": "#fffff0", # ivory
+        "weight": 1,
+        "fillOpacity": 0.5
+        },
+    tooltip=folium.GeoJsonTooltip(fields=["name"], labels=False),
+    show=False
+).add_to(map)
 
 
 # Render information
@@ -76,7 +96,7 @@ def get_info(title: str, description: str, photo_url: str) -> Html:
 
 
 # Mark POIs
-for _, row in gdf.iterrows():
+for _, row in points_gdf.iterrows():
     iframe = folium.Html(get_info(row["name"], row["text"],
                                   row["photo_url"]), script=True)
     popup = folium.Popup(iframe, parse_html=True, max_width=350)
@@ -86,8 +106,11 @@ for _, row in gdf.iterrows():
         location=loc,
         tooltip=row["name"], popup=popup,
         icon=folium.Icon(color="red", prefix="fa", icon="futbol-o")
-    ).add_to(m)
+    ).add_to(map)
 
+
+# Layercontrol
+folium.LayerControl().add_to(map)
 
 # Save map
-m.save("index.html")
+map.save("index.html")
