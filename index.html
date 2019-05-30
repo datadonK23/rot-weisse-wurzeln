@@ -17,7 +17,7 @@
     
     <meta name="viewport" content="width=device-width,
         initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <style>#map_a22182f6bcf544bcacc60b99fcab6002 {
+    <style>#map_a326795a5f084b38abbec32aeae40bc7 {
         position: relative;
         width: 100.0%;
         height: 100.0%;
@@ -30,7 +30,7 @@
 </head>
 <body>    
     
-    <div class="folium-map" id="map_a22182f6bcf544bcacc60b99fcab6002" ></div>
+    <div class="folium-map" id="map_a326795a5f084b38abbec32aeae40bc7" ></div>
 </body>
 <script>    
     
@@ -38,8 +38,8 @@
         var bounds = null;
     
 
-    var map_a22182f6bcf544bcacc60b99fcab6002 = L.map(
-        'map_a22182f6bcf544bcacc60b99fcab6002', {
+    var map_a326795a5f084b38abbec32aeae40bc7 = L.map(
+        'map_a326795a5f084b38abbec32aeae40bc7', {
         center: [48.04274, 14.42127],
         zoom: 15,
         maxBounds: bounds,
@@ -51,7 +51,7 @@
 
 
     
-    var tile_layer_8efde12dad10460583e3b326094d986b = L.tileLayer(
+    var tile_layer_18b39ab4c9964db9ad7e4bf2ffbb66ed = L.tileLayer(
         'http://tile.stamen.com/toner-background/{z}/{x}/{y}.png',
         {
         "attribution": "style:<a href=http://maps.stamen.com/toner-background/>Stamen toner-background</a> | <a href=imprint.html>Impressum</a>",
@@ -63,22 +63,22 @@
         "opacity": 1,
         "subdomains": "abc",
         "tms": false
-}).addTo(map_a22182f6bcf544bcacc60b99fcab6002);
+}).addTo(map_a326795a5f084b38abbec32aeae40bc7);
     
-            var locate_control_9d6ee8cac2e74502bc04f1825ef9c4d5 = L.control.locate(
+            var locate_control_f0466e9aad2648339dd15a994ab79ab7 = L.control.locate(
                 {"keepCurrentZoomLevel": true, "strings": {"popup": "Du bist hier", "title": "Wo bin ich?"}}
-            ).addTo(map_a22182f6bcf544bcacc60b99fcab6002);
+            ).addTo(map_a326795a5f084b38abbec32aeae40bc7);
         
     
-        var geo_json_c21302a007ef4bcd8ca4d094eb36bf26 = L.geoJson(
+        var geo_json_92315c09f18a44378503c48f15fbb91a = L.geoJson(
             {"crs": {"properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}, "type": "name"}, "features": [{"geometry": {"coordinates": [[[[14.410575000965547, 48.03713392775971], [14.40979671355783, 48.037409176911765], [14.410472048137896, 48.03826051928738], [14.4112462021008, 48.03798326575055], [14.410575000965547, 48.03713392775971]]]], "type": "MultiPolygon"}, "properties": {"highlight": {}, "id": 1, "name": "Vorw\u00e4rtsplatz", "style": {"color": "#fffff0", "fillColor": "#00ff00", "fillOpacity": 0.5, "weight": 1}}, "type": "Feature"}, {"geometry": {"coordinates": [[[[14.42675248731497, 48.049893976411916], [14.426242604094309, 48.0507517245346], [14.427071756141512, 48.050978646506856], [14.427596892602857, 48.05012396643339], [14.42675248731497, 48.049893976411916]]]], "type": "MultiPolygon"}, "properties": {"highlight": {}, "id": 2, "name": "Vorw\u00e4rtsplatz II", "style": {"color": "#fffff0", "fillColor": "#00ff00", "fillOpacity": 0.5, "weight": 1}}, "type": "Feature"}], "name": "grounds", "type": "FeatureCollection"},
             {
             }
-        ).addTo(map_a22182f6bcf544bcacc60b99fcab6002 );
-        geo_json_c21302a007ef4bcd8ca4d094eb36bf26.setStyle(function(feature) {return feature.properties.style;});
+        ).addTo(map_a326795a5f084b38abbec32aeae40bc7 );
+        geo_json_92315c09f18a44378503c48f15fbb91a.setStyle(function(feature) {return feature.properties.style;});
         
     
-        geo_json_c21302a007ef4bcd8ca4d094eb36bf26.bindTooltip(
+        geo_json_92315c09f18a44378503c48f15fbb91a.bindTooltip(
             function(layer){
             // Convert non-primitive to String.
             let handleObject = (feature)=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
@@ -96,432 +96,432 @@
             }, {"sticky": true});
         
     
-            var feature_group_32c2b5ce8a304c08996e4c93501b6498 = L.featureGroup(
-                ).addTo(map_a22182f6bcf544bcacc60b99fcab6002);
+            var feature_group_5f75ef04e0374ec6a89ec039ce34a765 = L.featureGroup(
+                ).addTo(map_a326795a5f084b38abbec32aeae40bc7);
         
     
-        var marker_33d9929990614af9bff641562a736ed2 = L.marker(
+        var marker_2bc5dedc2a81499d998a69e8f6ba266b = L.marker(
             [48.04683812769233, 14.433493508905496],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_32c2b5ce8a304c08996e4c93501b6498);
+            ).addTo(feature_group_5f75ef04e0374ec6a89ec039ce34a765);
         
     
 
-                var icon_bbce546671494cd39a72d5158a0b1292 = L.AwesomeMarkers.icon({
+                var icon_e7be7ae42b164013aa826e34c6a2446d = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_33d9929990614af9bff641562a736ed2.setIcon(icon_bbce546671494cd39a72d5158a0b1292);
+                marker_2bc5dedc2a81499d998a69e8f6ba266b.setIcon(icon_e7be7ae42b164013aa826e34c6a2446d);
             
     
-            var popup_b0bc82e4e2014382b9b8a0080af609a9 = L.popup({maxWidth: '350'
+            var popup_b40a5341055c4f8a9a615d153a6f706b = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_ee07065583284b91a78d43b650e4c8af = $(`<div id="html_ee07065583284b91a78d43b650e4c8af" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Rennbahn</h1>     <iframe width="310" height="210" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
-                popup_b0bc82e4e2014382b9b8a0080af609a9.setContent(html_ee07065583284b91a78d43b650e4c8af);
+                var html_6d8917c136c24b84bf5df57689a7a818 = $(`<div id="html_6d8917c136c24b84bf5df57689a7a818" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Rennbahn</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
+                popup_b40a5341055c4f8a9a615d153a6f706b.setContent(html_6d8917c136c24b84bf5df57689a7a818);
             
 
-            marker_33d9929990614af9bff641562a736ed2.bindPopup(popup_b0bc82e4e2014382b9b8a0080af609a9)
+            marker_2bc5dedc2a81499d998a69e8f6ba266b.bindPopup(popup_b40a5341055c4f8a9a615d153a6f706b)
             ;
 
             
         
     
-        marker_33d9929990614af9bff641562a736ed2.bindTooltip(
+        marker_2bc5dedc2a81499d998a69e8f6ba266b.bindTooltip(
             `<div>`
             + `Rennbahn` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_57f6f7d81c3744dfaf7a94fdf801abde = L.marker(
+        var marker_d7f79d55026247b9b2e6bbb5d3267168 = L.marker(
             [48.05011136354173, 14.429460215182715],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_32c2b5ce8a304c08996e4c93501b6498);
+            ).addTo(feature_group_5f75ef04e0374ec6a89ec039ce34a765);
         
     
 
-                var icon_3231da1c14624d89b1d03122bc52afc1 = L.AwesomeMarkers.icon({
+                var icon_07075d85da474405bf211ce2e8c5a3e0 = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_57f6f7d81c3744dfaf7a94fdf801abde.setIcon(icon_3231da1c14624d89b1d03122bc52afc1);
+                marker_d7f79d55026247b9b2e6bbb5d3267168.setIcon(icon_07075d85da474405bf211ce2e8c5a3e0);
             
     
-            var popup_45a9f96fcccb4e20a52c0b4730b8b68e = L.popup({maxWidth: '350'
+            var popup_9a906f49f2b64731a015779e6e4eefbf = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_f991d4e5e8c14f74904c025e8eff87a0 = $(`<div id="html_f991d4e5e8c14f74904c025e8eff87a0" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vorwärtsplatz I</h1>     <iframe width="310" height="210" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
-                popup_45a9f96fcccb4e20a52c0b4730b8b68e.setContent(html_f991d4e5e8c14f74904c025e8eff87a0);
+                var html_f966a38390e74bed8afbbfb1f7b1eb8b = $(`<div id="html_f966a38390e74bed8afbbfb1f7b1eb8b" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vorwärtsplatz I</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
+                popup_9a906f49f2b64731a015779e6e4eefbf.setContent(html_f966a38390e74bed8afbbfb1f7b1eb8b);
             
 
-            marker_57f6f7d81c3744dfaf7a94fdf801abde.bindPopup(popup_45a9f96fcccb4e20a52c0b4730b8b68e)
+            marker_d7f79d55026247b9b2e6bbb5d3267168.bindPopup(popup_9a906f49f2b64731a015779e6e4eefbf)
             ;
 
             
         
     
-        marker_57f6f7d81c3744dfaf7a94fdf801abde.bindTooltip(
+        marker_d7f79d55026247b9b2e6bbb5d3267168.bindTooltip(
             `<div>`
             + `Vorwärtsplatz I` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_e9963d73ac29406bb4c5f9da592e2004 = L.marker(
+        var marker_95ac64935cb845cf8887b76af3436c8a = L.marker(
             [48.050263634010676, 14.426941910767146],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_32c2b5ce8a304c08996e4c93501b6498);
+            ).addTo(feature_group_5f75ef04e0374ec6a89ec039ce34a765);
         
     
 
-                var icon_437a68fa73bf4fbc9c1c37af7c903ba0 = L.AwesomeMarkers.icon({
+                var icon_d7a4c429ce3242a3b06723e8b1fe6d8c = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_e9963d73ac29406bb4c5f9da592e2004.setIcon(icon_437a68fa73bf4fbc9c1c37af7c903ba0);
+                marker_95ac64935cb845cf8887b76af3436c8a.setIcon(icon_d7a4c429ce3242a3b06723e8b1fe6d8c);
             
     
-            var popup_2e57e84988124c629de1ebde79e26a91 = L.popup({maxWidth: '350'
+            var popup_1e97e03104174c2c80af7c4129b61fd7 = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_49355c559faf4aee9e48d85ece14eb45 = $(`<div id="html_49355c559faf4aee9e48d85ece14eb45" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vorwärtsplatz II</h1>     <iframe width="310" height="210" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
-                popup_2e57e84988124c629de1ebde79e26a91.setContent(html_49355c559faf4aee9e48d85ece14eb45);
+                var html_f56f236d519041309ec2b9ff93ec4cf5 = $(`<div id="html_f56f236d519041309ec2b9ff93ec4cf5" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vorwärtsplatz II</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
+                popup_1e97e03104174c2c80af7c4129b61fd7.setContent(html_f56f236d519041309ec2b9ff93ec4cf5);
             
 
-            marker_e9963d73ac29406bb4c5f9da592e2004.bindPopup(popup_2e57e84988124c629de1ebde79e26a91)
+            marker_95ac64935cb845cf8887b76af3436c8a.bindPopup(popup_1e97e03104174c2c80af7c4129b61fd7)
             ;
 
             
         
     
-        marker_e9963d73ac29406bb4c5f9da592e2004.bindTooltip(
+        marker_95ac64935cb845cf8887b76af3436c8a.bindTooltip(
             `<div>`
             + `Vorwärtsplatz II` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_d544b3419fcb49728b990d0b8f8f72f1 = L.marker(
+        var marker_0db2908c1a384403b202aebd83f85c77 = L.marker(
             [48.04546607350199, 14.427463815403312],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_32c2b5ce8a304c08996e4c93501b6498);
+            ).addTo(feature_group_5f75ef04e0374ec6a89ec039ce34a765);
         
     
 
-                var icon_9bb9b7ac70b14a059f415caf603d5a7f = L.AwesomeMarkers.icon({
+                var icon_d9dfa694204a4bbeb3ae033a056c3ef2 = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_d544b3419fcb49728b990d0b8f8f72f1.setIcon(icon_9bb9b7ac70b14a059f415caf603d5a7f);
+                marker_0db2908c1a384403b202aebd83f85c77.setIcon(icon_d9dfa694204a4bbeb3ae033a056c3ef2);
             
     
-            var popup_db494e17ac3f4195b6dc03de74fb57fc = L.popup({maxWidth: '350'
+            var popup_afd39d03390c48168fcad9a9d5a3c4d0 = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_11f4effadb164bedaaced7c9ced85f55 = $(`<div id="html_11f4effadb164bedaaced7c9ced85f55" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vereinslokal Schachhuber</h1>     <iframe width="310" height="210" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
-                popup_db494e17ac3f4195b6dc03de74fb57fc.setContent(html_11f4effadb164bedaaced7c9ced85f55);
+                var html_c037b0f9d5a2492fa67a7156459f0c8d = $(`<div id="html_c037b0f9d5a2492fa67a7156459f0c8d" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vereinslokal Schachhuber</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
+                popup_afd39d03390c48168fcad9a9d5a3c4d0.setContent(html_c037b0f9d5a2492fa67a7156459f0c8d);
             
 
-            marker_d544b3419fcb49728b990d0b8f8f72f1.bindPopup(popup_db494e17ac3f4195b6dc03de74fb57fc)
+            marker_0db2908c1a384403b202aebd83f85c77.bindPopup(popup_afd39d03390c48168fcad9a9d5a3c4d0)
             ;
 
             
         
     
-        marker_d544b3419fcb49728b990d0b8f8f72f1.bindTooltip(
+        marker_0db2908c1a384403b202aebd83f85c77.bindTooltip(
             `<div>`
             + `Vereinslokal Schachhuber` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_bb718a0813b14f3b9567eb1312574239 = L.marker(
+        var marker_eb06670698c14ba8af8be7e44c926a3c = L.marker(
             [48.04220884076951, 14.42075881464231],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_32c2b5ce8a304c08996e4c93501b6498);
+            ).addTo(feature_group_5f75ef04e0374ec6a89ec039ce34a765);
         
     
 
-                var icon_ba1dd091390149c7a0ca4b7d83973fd2 = L.AwesomeMarkers.icon({
+                var icon_0d5b42432e6f46c5912b206344960c5d = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_bb718a0813b14f3b9567eb1312574239.setIcon(icon_ba1dd091390149c7a0ca4b7d83973fd2);
+                marker_eb06670698c14ba8af8be7e44c926a3c.setIcon(icon_0d5b42432e6f46c5912b206344960c5d);
             
     
-            var popup_0e85fe02df4947c78d413025ad160705 = L.popup({maxWidth: '350'
+            var popup_9a90e4d4b4744b6f83f508e9c430868d = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_93377929412c4188af3b6e1e9303a617 = $(`<div id="html_93377929412c4188af3b6e1e9303a617" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Zwischenbrücken</h1>     <iframe width="310" height="210" src='data/photos/zwischenbruecken.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
-                popup_0e85fe02df4947c78d413025ad160705.setContent(html_93377929412c4188af3b6e1e9303a617);
+                var html_9e3bc63fa31f4fd6811749232f9b0024 = $(`<div id="html_9e3bc63fa31f4fd6811749232f9b0024" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Zwischenbrücken</h1>     <iframe width="284" height="184" src='data/photos/zwischenbruecken.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
+                popup_9a90e4d4b4744b6f83f508e9c430868d.setContent(html_9e3bc63fa31f4fd6811749232f9b0024);
             
 
-            marker_bb718a0813b14f3b9567eb1312574239.bindPopup(popup_0e85fe02df4947c78d413025ad160705)
+            marker_eb06670698c14ba8af8be7e44c926a3c.bindPopup(popup_9a90e4d4b4744b6f83f508e9c430868d)
             ;
 
             
         
     
-        marker_bb718a0813b14f3b9567eb1312574239.bindTooltip(
+        marker_eb06670698c14ba8af8be7e44c926a3c.bindTooltip(
             `<div>`
             + `Zwischenbrücken` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_6d49b007148d4056b7240cb3f8ddf3bb = L.marker(
+        var marker_f47f38e8e4554d6aa5f7b069b5a52038 = L.marker(
             [48.040746637705425, 14.42008341818175],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_32c2b5ce8a304c08996e4c93501b6498);
+            ).addTo(feature_group_5f75ef04e0374ec6a89ec039ce34a765);
         
     
 
-                var icon_07143a5dd1734a9c9e20bb2a9118d1d4 = L.AwesomeMarkers.icon({
+                var icon_d758b1d0a8794a0293e2c5a057d9bc08 = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_6d49b007148d4056b7240cb3f8ddf3bb.setIcon(icon_07143a5dd1734a9c9e20bb2a9118d1d4);
+                marker_f47f38e8e4554d6aa5f7b069b5a52038.setIcon(icon_d758b1d0a8794a0293e2c5a057d9bc08);
             
     
-            var popup_e8bbed5b90e7445b9699cda3a64e6ee4 = L.popup({maxWidth: '350'
+            var popup_554cbeae7cd64cb8b05f590d685721c0 = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_79060c2956854fbe9e6d9a430a131f7b = $(`<div id="html_79060c2956854fbe9e6d9a430a131f7b" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Gösser-Bräu</h1>     <iframe width="310" height="210" src='data/photos/goesser_braeu.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
-                popup_e8bbed5b90e7445b9699cda3a64e6ee4.setContent(html_79060c2956854fbe9e6d9a430a131f7b);
+                var html_b0f1418b4026488dbbccb83c87ae9bd0 = $(`<div id="html_b0f1418b4026488dbbccb83c87ae9bd0" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Gösser-Bräu</h1>     <iframe width="284" height="184" src='data/photos/goesser_braeu.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
+                popup_554cbeae7cd64cb8b05f590d685721c0.setContent(html_b0f1418b4026488dbbccb83c87ae9bd0);
             
 
-            marker_6d49b007148d4056b7240cb3f8ddf3bb.bindPopup(popup_e8bbed5b90e7445b9699cda3a64e6ee4)
+            marker_f47f38e8e4554d6aa5f7b069b5a52038.bindPopup(popup_554cbeae7cd64cb8b05f590d685721c0)
             ;
 
             
         
     
-        marker_6d49b007148d4056b7240cb3f8ddf3bb.bindTooltip(
+        marker_f47f38e8e4554d6aa5f7b069b5a52038.bindTooltip(
             `<div>`
             + `Gösser-Bräu` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_b28986ced73141daa057cbf80f9395d9 = L.marker(
+        var marker_45cd1636dab54c2d88949023c42e9b3d = L.marker(
             [48.040010048124046, 14.420029202080682],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_32c2b5ce8a304c08996e4c93501b6498);
+            ).addTo(feature_group_5f75ef04e0374ec6a89ec039ce34a765);
         
     
 
-                var icon_a71fb6cf44c44120b0eb4fd6d7fc7cc2 = L.AwesomeMarkers.icon({
+                var icon_43919b30c88a4fc49684ea80657cf351 = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_b28986ced73141daa057cbf80f9395d9.setIcon(icon_a71fb6cf44c44120b0eb4fd6d7fc7cc2);
+                marker_45cd1636dab54c2d88949023c42e9b3d.setIcon(icon_43919b30c88a4fc49684ea80657cf351);
             
     
-            var popup_e6fdd3b2a9d548d2ab1c372ce156f780 = L.popup({maxWidth: '350'
+            var popup_cd0be7b5d69e4c9382ee4d60d5ec65da = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_115ea79e1ac3463baeae66dede835134 = $(`<div id="html_115ea79e1ac3463baeae66dede835134" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Kaufhaus Dedic</h1>     <iframe width="310" height="210" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
-                popup_e6fdd3b2a9d548d2ab1c372ce156f780.setContent(html_115ea79e1ac3463baeae66dede835134);
+                var html_656be9c97f72482e9dcbe0a2cb7c2373 = $(`<div id="html_656be9c97f72482e9dcbe0a2cb7c2373" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Kaufhaus Dedic</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
+                popup_cd0be7b5d69e4c9382ee4d60d5ec65da.setContent(html_656be9c97f72482e9dcbe0a2cb7c2373);
             
 
-            marker_b28986ced73141daa057cbf80f9395d9.bindPopup(popup_e6fdd3b2a9d548d2ab1c372ce156f780)
+            marker_45cd1636dab54c2d88949023c42e9b3d.bindPopup(popup_cd0be7b5d69e4c9382ee4d60d5ec65da)
             ;
 
             
         
     
-        marker_b28986ced73141daa057cbf80f9395d9.bindTooltip(
+        marker_45cd1636dab54c2d88949023c42e9b3d.bindTooltip(
             `<div>`
             + `Kaufhaus Dedic` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_a33c55a59f0c406595b36bdbb2d80363 = L.marker(
+        var marker_b779171e6bec408998b713b52a8abe62 = L.marker(
             [48.037067364853364, 14.41798803752466],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_32c2b5ce8a304c08996e4c93501b6498);
+            ).addTo(feature_group_5f75ef04e0374ec6a89ec039ce34a765);
         
     
 
-                var icon_333011d081f44fc189307d7baff10e70 = L.AwesomeMarkers.icon({
+                var icon_f02b1e17efab48febd9113374b37e1cb = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_a33c55a59f0c406595b36bdbb2d80363.setIcon(icon_333011d081f44fc189307d7baff10e70);
+                marker_b779171e6bec408998b713b52a8abe62.setIcon(icon_f02b1e17efab48febd9113374b37e1cb);
             
     
-            var popup_36cb261df7a3425fac8d3b169ba25395 = L.popup({maxWidth: '350'
+            var popup_10f093ed41e24839876b92b71ce9d523 = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_1f26fb75dd974af08b77e617ba9424a6 = $(`<div id="html_1f26fb75dd974af08b77e617ba9424a6" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vereinslokal Wipplinger</h1>     <iframe width="310" height="210" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
-                popup_36cb261df7a3425fac8d3b169ba25395.setContent(html_1f26fb75dd974af08b77e617ba9424a6);
+                var html_f73fb42775614b3cac9d6ea3d5c4231c = $(`<div id="html_f73fb42775614b3cac9d6ea3d5c4231c" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vereinslokal Wipplinger</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
+                popup_10f093ed41e24839876b92b71ce9d523.setContent(html_f73fb42775614b3cac9d6ea3d5c4231c);
             
 
-            marker_a33c55a59f0c406595b36bdbb2d80363.bindPopup(popup_36cb261df7a3425fac8d3b169ba25395)
+            marker_b779171e6bec408998b713b52a8abe62.bindPopup(popup_10f093ed41e24839876b92b71ce9d523)
             ;
 
             
         
     
-        marker_a33c55a59f0c406595b36bdbb2d80363.bindTooltip(
+        marker_b779171e6bec408998b713b52a8abe62.bindTooltip(
             `<div>`
             + `Vereinslokal Wipplinger` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_c9faea06b5564cb89292873e01baec2b = L.marker(
+        var marker_100a45470691405bb415bc98437e073f = L.marker(
             [48.035705393095704, 14.41395829361937],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_32c2b5ce8a304c08996e4c93501b6498);
+            ).addTo(feature_group_5f75ef04e0374ec6a89ec039ce34a765);
         
     
 
-                var icon_4226905f6623489ca8dcd1d4d2ffb022 = L.AwesomeMarkers.icon({
+                var icon_2d8c5a2a616d40738c0d0450a640a6a1 = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_c9faea06b5564cb89292873e01baec2b.setIcon(icon_4226905f6623489ca8dcd1d4d2ffb022);
+                marker_100a45470691405bb415bc98437e073f.setIcon(icon_2d8c5a2a616d40738c0d0450a640a6a1);
             
     
-            var popup_690c0a2c0a7e49b895b27a3908d116b4 = L.popup({maxWidth: '350'
+            var popup_ef38ec864002462289746f9b8585266c = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_370e2a29c9484037ae2ab8220df42427 = $(`<div id="html_370e2a29c9484037ae2ab8220df42427" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Casino-Saal</h1>     <iframe width="310" height="210" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
-                popup_690c0a2c0a7e49b895b27a3908d116b4.setContent(html_370e2a29c9484037ae2ab8220df42427);
+                var html_6b5508cd3ffa4dbbaee005183033b60c = $(`<div id="html_6b5508cd3ffa4dbbaee005183033b60c" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Casino-Saal</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
+                popup_ef38ec864002462289746f9b8585266c.setContent(html_6b5508cd3ffa4dbbaee005183033b60c);
             
 
-            marker_c9faea06b5564cb89292873e01baec2b.bindPopup(popup_690c0a2c0a7e49b895b27a3908d116b4)
+            marker_100a45470691405bb415bc98437e073f.bindPopup(popup_ef38ec864002462289746f9b8585266c)
             ;
 
             
         
     
-        marker_c9faea06b5564cb89292873e01baec2b.bindTooltip(
+        marker_100a45470691405bb415bc98437e073f.bindTooltip(
             `<div>`
             + `Casino-Saal` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_fe67b7cad723439cbd9c5f242615c076 = L.marker(
+        var marker_fff90e4d2c704994b934c4ed5dcfd61e = L.marker(
             [48.037661511959854, 14.410483377303699],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_32c2b5ce8a304c08996e4c93501b6498);
+            ).addTo(feature_group_5f75ef04e0374ec6a89ec039ce34a765);
         
     
 
-                var icon_c24a4bb26de34c068d1a24cf7a695069 = L.AwesomeMarkers.icon({
+                var icon_c0306522cc4f47f99559c4f6b2167a07 = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_fe67b7cad723439cbd9c5f242615c076.setIcon(icon_c24a4bb26de34c068d1a24cf7a695069);
+                marker_fff90e4d2c704994b934c4ed5dcfd61e.setIcon(icon_c0306522cc4f47f99559c4f6b2167a07);
             
     
-            var popup_7a9e31ab052c4da19ad40732da926095 = L.popup({maxWidth: '350'
+            var popup_5b8661aaa46f4b3d906af17a01d80bbf = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_b59cd03deba14765aa4dea3584e529d8 = $(`<div id="html_b59cd03deba14765aa4dea3584e529d8" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vorwärtsplatz</h1>     <iframe width="310" height="210" src='data/photos/v_platz.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
-                popup_7a9e31ab052c4da19ad40732da926095.setContent(html_b59cd03deba14765aa4dea3584e529d8);
+                var html_801199c77dfc461eb5989c5c82538735 = $(`<div id="html_801199c77dfc461eb5989c5c82538735" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vorwärtsplatz</h1>     <iframe width="284" height="184" src='data/photos/v_platz.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu f</p>     </html></div>`)[0];
+                popup_5b8661aaa46f4b3d906af17a01d80bbf.setContent(html_801199c77dfc461eb5989c5c82538735);
             
 
-            marker_fe67b7cad723439cbd9c5f242615c076.bindPopup(popup_7a9e31ab052c4da19ad40732da926095)
+            marker_fff90e4d2c704994b934c4ed5dcfd61e.bindPopup(popup_5b8661aaa46f4b3d906af17a01d80bbf)
             ;
 
             
         
     
-        marker_fe67b7cad723439cbd9c5f242615c076.bindTooltip(
+        marker_fff90e4d2c704994b934c4ed5dcfd61e.bindTooltip(
             `<div>`
             + `Vorwärtsplatz` + `</div>`,
             {"sticky": true}
         );
         
     
-            var layer_control_de47c1421a7e4629b5f1d8041082cb34 = {
-                base_layers : { "Basiskarte" : tile_layer_8efde12dad10460583e3b326094d986b, },
-                overlays : { "Spielstätten" : geo_json_c21302a007ef4bcd8ca4d094eb36bf26,"Stationen" : feature_group_32c2b5ce8a304c08996e4c93501b6498, }
+            var layer_control_9c952feecc5240b1bd5cd1ae8a4a4bdb = {
+                base_layers : { "Basiskarte" : tile_layer_18b39ab4c9964db9ad7e4bf2ffbb66ed, },
+                overlays : { "Spielstätten" : geo_json_92315c09f18a44378503c48f15fbb91a,"Stationen" : feature_group_5f75ef04e0374ec6a89ec039ce34a765, }
                 };
             L.control.layers(
-                layer_control_de47c1421a7e4629b5f1d8041082cb34.base_layers,
-                layer_control_de47c1421a7e4629b5f1d8041082cb34.overlays,
+                layer_control_9c952feecc5240b1bd5cd1ae8a4a4bdb.base_layers,
+                layer_control_9c952feecc5240b1bd5cd1ae8a4a4bdb.overlays,
                 {position: 'topright',
                  collapsed: true,
                  autoZIndex: true
-                }).addTo(map_a22182f6bcf544bcacc60b99fcab6002);
+                }).addTo(map_a326795a5f084b38abbec32aeae40bc7);
             
-                geo_json_c21302a007ef4bcd8ca4d094eb36bf26.remove();
+                geo_json_92315c09f18a44378503c48f15fbb91a.remove();
         
 </script>

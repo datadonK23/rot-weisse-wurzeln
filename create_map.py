@@ -88,7 +88,7 @@ def get_info(title: str, description: str, photo_url: str) -> Html:
     <!doctype html>
     <html>
     <h1>{}</h1>""".format(title) + """
-    <iframe width="310" height="210" src='{}'""".format(photo_url) + """ 
+    <iframe width="284" height="184" src='{}'""".format(photo_url) + """ 
     frameborder="0"></iframe>
     <p>{}</p>""".format(description) + """
     </html>""")
@@ -102,7 +102,7 @@ fg_points: FeatureGroup = FeatureGroup(name="Stationen", show=True)
 for _, row in points_gdf.iterrows():
     iframe = folium.Html(get_info(row["name"], row["text"],
                                   row["photo_url"]), script=True)
-    popup = folium.Popup(iframe, parse_html=True, max_width=350)
+    popup = folium.Popup(iframe, parse_html=True, max_width=280)
 
     loc = [row.geometry.y, row.geometry.x]
     folium.Marker(
