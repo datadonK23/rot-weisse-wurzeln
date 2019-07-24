@@ -46,7 +46,10 @@ f_path_points: str = os.path.join(path, f_name_points)
 points_gdf: gpd.GeoDataFrame = gpd.read_file(f_path_points)
 
 f_name_grounds: str = "grounds.geojson"
-grounds_ref: str = os.path.join(path,f_name_grounds)
+grounds_ref: str = os.path.join(path, f_name_grounds)
+
+f_name_walks: str = "walks.geojson"
+f_path_walks : str = os.path.join(path, f_name_walks)
 
 
 # Grounds feature
@@ -62,6 +65,11 @@ folium.GeoJson(
     tooltip=folium.GeoJsonTooltip(fields=["name"], labels=False),
     show=False
 ).add_to(map)
+
+
+# Walks feature
+#FIXME
+
 
 
 # Render information
