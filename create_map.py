@@ -7,7 +7,7 @@ Author: datadonk23
 Date: 14.04.19 
 """
 
-import os
+import os, json
 from typing import List, NewType
 import geopandas as gpd # type: ignore
 import folium # type: ignore
@@ -48,8 +48,15 @@ points_gdf: gpd.GeoDataFrame = gpd.read_file(f_path_points)
 f_name_grounds: str = "grounds.geojson"
 grounds_ref: str = os.path.join(path, f_name_grounds)
 
+walks: dict = {}
 f_name_walks: str = "walks.geojson"
-f_path_walks : str = os.path.join(path, f_name_walks)
+f_path_walks: str = os.path.join(path, f_name_walks)
+with open(f_path_walks) as f:
+    walks_data = json.load(f)
+for feature in walks_data["features"]:
+    raw_coords: List[List[float]] = feature["geometry"]["coordinates"][0]
+    coords: List[List[float]] = [[coord[1], coord[0]] for coord in raw_coords]
+    walks[feature["properties"]["name"]] = coords
 
 
 # Grounds feature
@@ -68,8 +75,21 @@ folium.GeoJson(
 
 
 # Walks feature
-#FIXME
+fg_walks: FeatureGroup = FeatureGroup(name="Rundgänge", show=True)
 
+for walk_id, walk_coords in walks.items():
+    loc: list = walk_coords
+
+    folium.PolyLine(
+        locations=loc,
+        tooltip="Rundgang " + walk_id,
+        color="#d90000",
+        weight=6,
+        opacity=0.75,
+        smooth_factor=1,
+    ).add_to(fg_walks)
+
+fg_walks.add_to(map)
 
 
 # Render information
