@@ -19,6 +19,12 @@ from locate_control import LocateControl
 Html = NewType("Html", str)
 
 
+# Color constants
+RED: str = "#d90000"
+WHITE: str = "#fffff0" # ivory
+GREEN: str = "#00ff00" # lime
+
+
 # Basemap
 map_center: List[float] = [48.04274, 14.42127]
 map: folium.Map = folium.Map(location=map_center, zoom_start=15, tiles=None)
@@ -64,8 +70,8 @@ folium.GeoJson(
     grounds_ref,
     name="Spielstätten",
     style_function= lambda feature: {
-        "fillColor": "#00ff00", # lime
-        "color": "#fffff0", # ivory
+        "fillColor": GREEN,
+        "color": WHITE,
         "weight": 1,
         "fillOpacity": 0.5
         },
@@ -84,7 +90,7 @@ for walk_id, walk_coords in walks.items():
     folium.PolyLine(
         locations=loc,
         tooltip="Rundgang " + walk_id,
-        color="#d90000",
+        color=RED,
         weight=6,
         opacity=0.75,
         smooth_factor=1,
@@ -96,8 +102,8 @@ for walk_id, walk_coords in walks.items():
     folium.RegularPolygonMarker(
         location=start_loc,
         number_of_sides=3,
-        color="#d90000",
-        fill_color="#d90000",
+        color=RED,
+        fill_color=RED,
         fill_opacity=1,
         rotation=195,
         radius=12
@@ -150,7 +156,7 @@ for _, row in points_gdf.iterrows():
     folium.Marker(
         location=loc,
         tooltip=row["name"], popup=popup,
-        icon=folium.Icon(color="#d90000", prefix="fa", icon="futbol-o")
+        icon=folium.Icon(color=RED, prefix="fa", icon="futbol-o")
     ).add_to(fg_points)
 
 fg_points.add_to(map)
