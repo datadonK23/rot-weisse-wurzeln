@@ -17,7 +17,7 @@
     
     <meta name="viewport" content="width=device-width,
         initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <style>#map_d0079f9d9ec1426d8025a8c6d3c78bc5 {
+    <style>#map_fa2400a123244e9abb2b96c9360b8950 {
         position: relative;
         width: 100.0%;
         height: 100.0%;
@@ -27,10 +27,11 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-dvf/0.3.0/leaflet-dvf.markers.min.js"></script>
 </head>
 <body>    
     
-    <div class="folium-map" id="map_d0079f9d9ec1426d8025a8c6d3c78bc5" ></div>
+    <div class="folium-map" id="map_fa2400a123244e9abb2b96c9360b8950" ></div>
 </body>
 <script>    
     
@@ -38,8 +39,8 @@
         var bounds = null;
     
 
-    var map_d0079f9d9ec1426d8025a8c6d3c78bc5 = L.map(
-        'map_d0079f9d9ec1426d8025a8c6d3c78bc5', {
+    var map_fa2400a123244e9abb2b96c9360b8950 = L.map(
+        'map_fa2400a123244e9abb2b96c9360b8950', {
         center: [48.04274, 14.42127],
         zoom: 15,
         maxBounds: bounds,
@@ -51,7 +52,7 @@
 
 
     
-    var tile_layer_e3cd9aa530b446c6bc092c3ea697305f = L.tileLayer(
+    var tile_layer_1152725026e84db4bfdfbf46eb6e4297 = L.tileLayer(
         'http://tile.stamen.com/toner-background/{z}/{x}/{y}.png',
         {
         "attribution": "style:<a href=http://maps.stamen.com/toner-background/>Stamen toner-background</a> | <a href=imprint.html>Impressum</a>",
@@ -63,22 +64,22 @@
         "opacity": 1,
         "subdomains": "abc",
         "tms": false
-}).addTo(map_d0079f9d9ec1426d8025a8c6d3c78bc5);
+}).addTo(map_fa2400a123244e9abb2b96c9360b8950);
     
-            var locate_control_13bc348b96044a95a62542bed82b072b = L.control.locate(
+            var locate_control_27bc9fe6941c4b5b961754548ded8be3 = L.control.locate(
                 {"keepCurrentZoomLevel": true, "strings": {"popup": "Du bist hier", "title": "Wo bin ich?"}}
-            ).addTo(map_d0079f9d9ec1426d8025a8c6d3c78bc5);
+            ).addTo(map_fa2400a123244e9abb2b96c9360b8950);
         
     
-        var geo_json_9cd5be51b8c14b4ab70636f4312c9af4 = L.geoJson(
+        var geo_json_25bf0d2179b9403f97718a7e67dc27be = L.geoJson(
             {"crs": {"properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}, "type": "name"}, "features": [{"geometry": {"coordinates": [[[[14.410575000965547, 48.03713392775971], [14.40979671355783, 48.037409176911765], [14.410472048137896, 48.03826051928738], [14.4112462021008, 48.03798326575055], [14.410575000965547, 48.03713392775971]]]], "type": "MultiPolygon"}, "properties": {"highlight": {}, "id": 4, "name": "Vorw\u00e4rtsplatz", "style": {"color": "#fffff0", "fillColor": "#00ff00", "fillOpacity": 0.5, "weight": 1}}, "type": "Feature"}, {"geometry": {"coordinates": [[[[14.42675248731497, 48.049893976411916], [14.426242604094309, 48.0507517245346], [14.427071756141512, 48.050978646506856], [14.427596892602857, 48.05012396643339], [14.42675248731497, 48.049893976411916]]]], "type": "MultiPolygon"}, "properties": {"highlight": {}, "id": 3, "name": "Vorw\u00e4rtsplatz II", "style": {"color": "#fffff0", "fillColor": "#00ff00", "fillOpacity": 0.5, "weight": 1}}, "type": "Feature"}, {"geometry": {"coordinates": [[[[14.42975836659355, 48.05050454593918], [14.43106164763025, 48.050047209782015], [14.430561823780327, 48.04945734868988], [14.429250675168328, 48.04984854665659], [14.42975836659355, 48.05050454593918]]]], "type": "MultiPolygon"}, "properties": {"highlight": {}, "id": 2, "name": "Vorw\u00e4rtsplatz I", "style": {"color": "#fffff0", "fillColor": "#00ff00", "fillOpacity": 0.5, "weight": 1}}, "type": "Feature"}, {"geometry": {"coordinates": [[[[14.415136251135634, 48.034055164782785], [14.413910149432844, 48.03441173877599], [14.414338196772869, 48.03500966173674], [14.415535278317018, 48.03465187905439], [14.415136251135634, 48.034055164782785]]]], "type": "MultiPolygon"}, "properties": {"highlight": {}, "id": 5, "name": "Olympia Sportplatz Reithofferwiese", "style": {"color": "#fffff0", "fillColor": "#00ff00", "fillOpacity": 0.5, "weight": 1}}, "type": "Feature"}, {"geometry": {"coordinates": [[[[14.43258677448176, 48.04675139059335], [14.433752310285877, 48.04733706313636], [14.434292811504925, 48.046860990640106], [14.433134960552268, 48.046270175128086], [14.43258677448176, 48.04675139059335]]]], "type": "MultiPolygon"}, "properties": {"highlight": {}, "id": 1, "name": "Rennbahn-Platz", "style": {"color": "#fffff0", "fillColor": "#00ff00", "fillOpacity": 0.5, "weight": 1}}, "type": "Feature"}], "name": "grounds", "type": "FeatureCollection"},
             {
             }
-        ).addTo(map_d0079f9d9ec1426d8025a8c6d3c78bc5 );
-        geo_json_9cd5be51b8c14b4ab70636f4312c9af4.setStyle(function(feature) {return feature.properties.style;});
+        ).addTo(map_fa2400a123244e9abb2b96c9360b8950 );
+        geo_json_25bf0d2179b9403f97718a7e67dc27be.setStyle(function(feature) {return feature.properties.style;});
         
     
-        geo_json_9cd5be51b8c14b4ab70636f4312c9af4.bindTooltip(
+        geo_json_25bf0d2179b9403f97718a7e67dc27be.bindTooltip(
             function(layer){
             // Convert non-primitive to String.
             let handleObject = (feature)=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
@@ -96,11 +97,11 @@
             }, {"sticky": true});
         
     
-            var feature_group_23d1d2a2422547909b09e8eebae10d53 = L.featureGroup(
-                ).addTo(map_d0079f9d9ec1426d8025a8c6d3c78bc5);
+            var feature_group_af7d24a576414764b8c59d6cfa77cf14 = L.featureGroup(
+                ).addTo(map_fa2400a123244e9abb2b96c9360b8950);
         
     
-                var poly_line_2c10c5abe45542f0be6efa0571865313 = L.polyline(
+                var poly_line_cd6cee9b8d4e4c94b1b59c4350a0bf45 = L.polyline(
                     [[48.04770664017541, 14.433651807065129], [48.04774720805445, 14.433396516152225], [48.04874181054149, 14.431883603611007], [48.049084531280734, 14.431300828863106], [48.049480405867335, 14.430624935708455], [48.04964966580429, 14.430268156194932], [48.049802139155524, 14.428008203851203], [48.04970701821873, 14.428001926205804], [48.04950138853435, 14.427784301165294], [48.04929855572839, 14.427568768673257], [48.04897821815256, 14.427232914644396], [48.04851519394293, 14.427569814947487], [48.04791647368769, 14.427712108243204], [48.04653667003899, 14.427544914219553], [48.04653667003899, 14.427512553960442], [48.04646390208709, 14.427506670276967], [48.04633999966216, 14.427294857671889], [48.046278048337925, 14.42732574701013], [48.046280998402686, 14.427377229240532], [48.04590633882769, 14.427549326982158], [48.04541170534599, 14.42766111696817], [48.04540482174513, 14.42764199499688], [48.045381220820936, 14.427658175126433], [48.04534286929607, 14.42770524459423], [48.045280916772484, 14.427711128277705], [48.045133902152436, 14.42767435525599], [48.04500311287352, 14.427587570924743], [48.044922475708994, 14.427474310017859], [48.04482708768065, 14.427298534974064], [48.04476415115286, 14.427072013160302], [48.04470514808821, 14.426783712670051], [48.04458222481978, 14.426357145618155], [48.044384071893475, 14.425919546659742], [48.04435457015191, 14.425919546659742], [48.044251313923354, 14.425694495766844], [48.044150024279006, 14.425460619348739], [48.04398874715267, 14.424853129030001], [48.0438491043549, 14.424220633056503], [48.04365144031085, 14.423707281673359], [48.0433337994871, 14.422785014288742], [48.04316563590506, 14.422168698444793], [48.04313859200291, 14.422134867264818], [48.04307663682809, 14.421823032040674], [48.04301566499599, 14.421321448024475], [48.042840616431846, 14.421205245275857], [48.04222892520508, 14.420998580893816], [48.042233842366095, 14.420689687511409], [48.04221417371924, 14.420992697210341], [48.042029288071795, 14.420976517080787], [48.04176326793076, 14.420802212957856], [48.04117123296347, 14.420397709718989], [48.04075916474275, 14.420185161653476], [48.04048035299113, 14.420105731926569], [48.040014188173394, 14.41995863983971], [48.03957850711466, 14.419764478285053], [48.039168884880624, 14.4195703167304], [48.03882367850022, 14.419331292089252], [48.03841749253219, 14.419031224232054], [48.03805359439323, 14.418759839331798], [48.03809391836769, 14.418542143043243], [48.03781263340028, 14.418403876481596], [48.03766264690703, 14.418325917675556], [48.037284482302155, 14.418145729869153], [48.03706712245643, 14.418038352645743], [48.03695450805808, 14.417985399494475], [48.0367027230107, 14.417866254904114], [48.03673419620892, 14.417627965723401], [48.036703706548444, 14.417617669277323], [48.036612237458755, 14.417875080429328], [48.03586621736852, 14.41715432920371], [48.03592523055748, 14.416918981864734], [48.036006865357464, 14.41657993460452], [48.03611899005264, 14.416418133308973], [48.03647650883287, 14.41543335178744], [48.03652568591254, 14.41529655614666], [48.03667174156244, 14.41547821487393], [48.03677009530216, 14.415261989506245], [48.03678583188309, 14.414970747174264], [48.03655371682695, 14.414795707590898], [48.036261112670886, 14.41439635257507], [48.035933098977566, 14.413905065004956], [48.035933098977566, 14.413905065004956]],
                     {
   "bubblingMouseEvents": true,
@@ -120,401 +121,417 @@
   "weight": 6
 }
                     )
-                    .addTo(feature_group_23d1d2a2422547909b09e8eebae10d53);
+                    .addTo(feature_group_af7d24a576414764b8c59d6cfa77cf14);
             
     
-        poly_line_2c10c5abe45542f0be6efa0571865313.bindTooltip(
+        poly_line_cd6cee9b8d4e4c94b1b59c4350a0bf45.bindTooltip(
             `<div>`
             + `Rundgang A` + `</div>`,
             {"sticky": true}
         );
         
     
-            var feature_group_38f5c2959aba4c8580f805f19122f2ee = L.featureGroup(
-                ).addTo(map_d0079f9d9ec1426d8025a8c6d3c78bc5);
+            var regular_polygon_marker_a67ad135897845b48e637568f6002a48 = new L.RegularPolygonMarker(
+                new L.LatLng(48.04770664017541,14.433651807065129),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#d90000',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#d90000',
+                    fillOpacity: 1,
+                    numberOfSides: 3,
+                    rotation: 195,
+                    radius: 12
+                    }
+                ).addTo(feature_group_af7d24a576414764b8c59d6cfa77cf14);
+            
+    
+            var feature_group_e9b7b25e770544eb8713d1f19cef0ce2 = L.featureGroup(
+                ).addTo(map_fa2400a123244e9abb2b96c9360b8950);
         
     
-        var marker_70ebad674fc549edb03ac83e065bc45e = L.marker(
+        var marker_2d84ef60546c41e59162e8f4137d40dc = L.marker(
             [48.04770288758435, 14.433650274642405],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_38f5c2959aba4c8580f805f19122f2ee);
+            ).addTo(feature_group_e9b7b25e770544eb8713d1f19cef0ce2);
         
     
 
-                var icon_e02265435fe44b0fb79df9c90bafd95e = L.AwesomeMarkers.icon({
+                var icon_95f150c1bad247ac8f6c472651979e98 = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_70ebad674fc549edb03ac83e065bc45e.setIcon(icon_e02265435fe44b0fb79df9c90bafd95e);
+                marker_2d84ef60546c41e59162e8f4137d40dc.setIcon(icon_95f150c1bad247ac8f6c472651979e98);
             
     
-            var popup_f6fad92a7e6e4ee89dc784cefaeac955 = L.popup({maxWidth: '280'
+            var popup_9185b5184ca4475682151678c02c2861 = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_259187f3fc1043238cd1601cf92924d3 = $(`<div id="html_259187f3fc1043238cd1601cf92924d3" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Rennbahn</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
-                popup_f6fad92a7e6e4ee89dc784cefaeac955.setContent(html_259187f3fc1043238cd1601cf92924d3);
+                var html_bda4cd10410a4f18a4f03086b2bb31de = $(`<div id="html_bda4cd10410a4f18a4f03086b2bb31de" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Rennbahn</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
+                popup_9185b5184ca4475682151678c02c2861.setContent(html_bda4cd10410a4f18a4f03086b2bb31de);
             
 
-            marker_70ebad674fc549edb03ac83e065bc45e.bindPopup(popup_f6fad92a7e6e4ee89dc784cefaeac955)
+            marker_2d84ef60546c41e59162e8f4137d40dc.bindPopup(popup_9185b5184ca4475682151678c02c2861)
             ;
 
             
         
     
-        marker_70ebad674fc549edb03ac83e065bc45e.bindTooltip(
+        marker_2d84ef60546c41e59162e8f4137d40dc.bindTooltip(
             `<div>`
             + `Rennbahn` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_d1d8ace85ae44ff68d71532c09055860 = L.marker(
+        var marker_083eb962dfa84860a38656a055e9bdb7 = L.marker(
             [48.04948432893623, 14.430612774114048],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_38f5c2959aba4c8580f805f19122f2ee);
+            ).addTo(feature_group_e9b7b25e770544eb8713d1f19cef0ce2);
         
     
 
-                var icon_04ede58373f844dfb7187a2b8b24a548 = L.AwesomeMarkers.icon({
+                var icon_feb90b57df764c88a5bdbe1782602a41 = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_d1d8ace85ae44ff68d71532c09055860.setIcon(icon_04ede58373f844dfb7187a2b8b24a548);
+                marker_083eb962dfa84860a38656a055e9bdb7.setIcon(icon_feb90b57df764c88a5bdbe1782602a41);
             
     
-            var popup_f8578de6c0f24864955358da62dcbcc4 = L.popup({maxWidth: '280'
+            var popup_bfac25eee49c4008b01274d4a02a32cc = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_48c1e619566540e8bb6029a439401f29 = $(`<div id="html_48c1e619566540e8bb6029a439401f29" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vorwärtsplatz I</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
-                popup_f8578de6c0f24864955358da62dcbcc4.setContent(html_48c1e619566540e8bb6029a439401f29);
+                var html_9c3940368a824c0891007a79f13d73ae = $(`<div id="html_9c3940368a824c0891007a79f13d73ae" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vorwärtsplatz I</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
+                popup_bfac25eee49c4008b01274d4a02a32cc.setContent(html_9c3940368a824c0891007a79f13d73ae);
             
 
-            marker_d1d8ace85ae44ff68d71532c09055860.bindPopup(popup_f8578de6c0f24864955358da62dcbcc4)
+            marker_083eb962dfa84860a38656a055e9bdb7.bindPopup(popup_bfac25eee49c4008b01274d4a02a32cc)
             ;
 
             
         
     
-        marker_d1d8ace85ae44ff68d71532c09055860.bindTooltip(
+        marker_083eb962dfa84860a38656a055e9bdb7.bindTooltip(
             `<div>`
             + `Vorwärtsplatz I` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_07f9e296b7884231b18c5c6f225cba8c = L.marker(
+        var marker_33939a4ede934ba08732f16cae28a7c3 = L.marker(
             [48.049807353851364, 14.428005958288667],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_38f5c2959aba4c8580f805f19122f2ee);
+            ).addTo(feature_group_e9b7b25e770544eb8713d1f19cef0ce2);
         
     
 
-                var icon_d320ac1eb70340f2995ae099c989861b = L.AwesomeMarkers.icon({
+                var icon_4d211e466825401ea1731222346b095e = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_07f9e296b7884231b18c5c6f225cba8c.setIcon(icon_d320ac1eb70340f2995ae099c989861b);
+                marker_33939a4ede934ba08732f16cae28a7c3.setIcon(icon_4d211e466825401ea1731222346b095e);
             
     
-            var popup_3627e0f6b7c349099566bdaf1f2d723e = L.popup({maxWidth: '280'
+            var popup_2a83a3fff7104f5691ca147136c9f6fb = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_4ee63b900be349119ae956dde756ddfb = $(`<div id="html_4ee63b900be349119ae956dde756ddfb" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vorwärtsplatz II</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
-                popup_3627e0f6b7c349099566bdaf1f2d723e.setContent(html_4ee63b900be349119ae956dde756ddfb);
+                var html_794d1df1525c4b4aaa6324876c6dc317 = $(`<div id="html_794d1df1525c4b4aaa6324876c6dc317" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vorwärtsplatz II</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
+                popup_2a83a3fff7104f5691ca147136c9f6fb.setContent(html_794d1df1525c4b4aaa6324876c6dc317);
             
 
-            marker_07f9e296b7884231b18c5c6f225cba8c.bindPopup(popup_3627e0f6b7c349099566bdaf1f2d723e)
+            marker_33939a4ede934ba08732f16cae28a7c3.bindPopup(popup_2a83a3fff7104f5691ca147136c9f6fb)
             ;
 
             
         
     
-        marker_07f9e296b7884231b18c5c6f225cba8c.bindTooltip(
+        marker_33939a4ede934ba08732f16cae28a7c3.bindTooltip(
             `<div>`
             + `Vorwärtsplatz II` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_a24e05cc21f44072abf4e248a8ff64b1 = L.marker(
+        var marker_1ea2bf4268b9453696262a4c0cef0c96 = L.marker(
             [48.045401565457375, 14.427622979378807],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_38f5c2959aba4c8580f805f19122f2ee);
+            ).addTo(feature_group_e9b7b25e770544eb8713d1f19cef0ce2);
         
     
 
-                var icon_880af0bc77e043edbbda0b59fd40464a = L.AwesomeMarkers.icon({
+                var icon_09753683e961419594fee093c3187518 = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_a24e05cc21f44072abf4e248a8ff64b1.setIcon(icon_880af0bc77e043edbbda0b59fd40464a);
+                marker_1ea2bf4268b9453696262a4c0cef0c96.setIcon(icon_09753683e961419594fee093c3187518);
             
     
-            var popup_89f736cc0a5a40d3852c6cb220b512a8 = L.popup({maxWidth: '280'
+            var popup_6cda18064a72490aa72966d1ab159f75 = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_35cd615439ce41828cd4d8887b1421c6 = $(`<div id="html_35cd615439ce41828cd4d8887b1421c6" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vereinslokal Schachhuber</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
-                popup_89f736cc0a5a40d3852c6cb220b512a8.setContent(html_35cd615439ce41828cd4d8887b1421c6);
+                var html_fcf9b58625cb40e48b2622f2c7a02978 = $(`<div id="html_fcf9b58625cb40e48b2622f2c7a02978" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vereinslokal Schachhuber</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
+                popup_6cda18064a72490aa72966d1ab159f75.setContent(html_fcf9b58625cb40e48b2622f2c7a02978);
             
 
-            marker_a24e05cc21f44072abf4e248a8ff64b1.bindPopup(popup_89f736cc0a5a40d3852c6cb220b512a8)
+            marker_1ea2bf4268b9453696262a4c0cef0c96.bindPopup(popup_6cda18064a72490aa72966d1ab159f75)
             ;
 
             
         
     
-        marker_a24e05cc21f44072abf4e248a8ff64b1.bindTooltip(
+        marker_1ea2bf4268b9453696262a4c0cef0c96.bindTooltip(
             `<div>`
             + `Vereinslokal Schachhuber` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_184706d39f694bcf80c9975c1a8551a2 = L.marker(
+        var marker_66b1bd30aa244e3aaa27bbf0d8781fc3 = L.marker(
             [48.04223445180137, 14.420681804242866],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_38f5c2959aba4c8580f805f19122f2ee);
+            ).addTo(feature_group_e9b7b25e770544eb8713d1f19cef0ce2);
         
     
 
-                var icon_ff152c1e9fa04ea49b8d549efaec60dc = L.AwesomeMarkers.icon({
+                var icon_b901610d814b4687bc7b9dd87e429e44 = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_184706d39f694bcf80c9975c1a8551a2.setIcon(icon_ff152c1e9fa04ea49b8d549efaec60dc);
+                marker_66b1bd30aa244e3aaa27bbf0d8781fc3.setIcon(icon_b901610d814b4687bc7b9dd87e429e44);
             
     
-            var popup_240aee167b464e088e0396d0b4412d15 = L.popup({maxWidth: '280'
+            var popup_20d123e9b89d402ea88709e78577eed4 = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_6dc97b14948a40bdb36a650dedc0e7af = $(`<div id="html_6dc97b14948a40bdb36a650dedc0e7af" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Zwischenbrücken</h1>     <iframe width="284" height="184" src='data/photos/zwischenbruecken.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
-                popup_240aee167b464e088e0396d0b4412d15.setContent(html_6dc97b14948a40bdb36a650dedc0e7af);
+                var html_24deb9fd1a534e298d33baffd425c05c = $(`<div id="html_24deb9fd1a534e298d33baffd425c05c" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Zwischenbrücken</h1>     <iframe width="284" height="184" src='data/photos/zwischenbruecken.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
+                popup_20d123e9b89d402ea88709e78577eed4.setContent(html_24deb9fd1a534e298d33baffd425c05c);
             
 
-            marker_184706d39f694bcf80c9975c1a8551a2.bindPopup(popup_240aee167b464e088e0396d0b4412d15)
+            marker_66b1bd30aa244e3aaa27bbf0d8781fc3.bindPopup(popup_20d123e9b89d402ea88709e78577eed4)
             ;
 
             
         
     
-        marker_184706d39f694bcf80c9975c1a8551a2.bindTooltip(
+        marker_66b1bd30aa244e3aaa27bbf0d8781fc3.bindTooltip(
             `<div>`
             + `Zwischenbrücken` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_2aec27ccbd3a4aafb7af3d6ac6a4d4c5 = L.marker(
+        var marker_89ba0907aa5c492aaebbc27a1d1b68ac = L.marker(
             [48.04076078898907, 14.420181296879552],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_38f5c2959aba4c8580f805f19122f2ee);
+            ).addTo(feature_group_e9b7b25e770544eb8713d1f19cef0ce2);
         
     
 
-                var icon_db377221612e462ab21ca8c6b743e1b2 = L.AwesomeMarkers.icon({
+                var icon_d96cd17567654cca9daecaf22dbfc6de = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_2aec27ccbd3a4aafb7af3d6ac6a4d4c5.setIcon(icon_db377221612e462ab21ca8c6b743e1b2);
+                marker_89ba0907aa5c492aaebbc27a1d1b68ac.setIcon(icon_d96cd17567654cca9daecaf22dbfc6de);
             
     
-            var popup_f1b6e13f6a9b4c59a458f11e21828fee = L.popup({maxWidth: '280'
+            var popup_e35b1cbe7de14d26ae2fc1dc27ea6c89 = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_9f8e61b05c904f1ba4ba10fe9af36025 = $(`<div id="html_9f8e61b05c904f1ba4ba10fe9af36025" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Gösser-Bräu</h1>     <iframe width="284" height="184" src='data/photos/goesser_braeu.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
-                popup_f1b6e13f6a9b4c59a458f11e21828fee.setContent(html_9f8e61b05c904f1ba4ba10fe9af36025);
+                var html_7e1b826ad87e446ca1dc91e1b33460f5 = $(`<div id="html_7e1b826ad87e446ca1dc91e1b33460f5" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Gösser-Bräu</h1>     <iframe width="284" height="184" src='data/photos/goesser_braeu.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
+                popup_e35b1cbe7de14d26ae2fc1dc27ea6c89.setContent(html_7e1b826ad87e446ca1dc91e1b33460f5);
             
 
-            marker_2aec27ccbd3a4aafb7af3d6ac6a4d4c5.bindPopup(popup_f1b6e13f6a9b4c59a458f11e21828fee)
+            marker_89ba0907aa5c492aaebbc27a1d1b68ac.bindPopup(popup_e35b1cbe7de14d26ae2fc1dc27ea6c89)
             ;
 
             
         
     
-        marker_2aec27ccbd3a4aafb7af3d6ac6a4d4c5.bindTooltip(
+        marker_89ba0907aa5c492aaebbc27a1d1b68ac.bindTooltip(
             `<div>`
             + `Gösser-Bräu` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_0756d241ca2a4742bc2adfc278a0cb13 = L.marker(
+        var marker_3d1132ac946c4fec826995ea607baf08 = L.marker(
             [48.04001419671505, 14.419961630171208],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_38f5c2959aba4c8580f805f19122f2ee);
+            ).addTo(feature_group_e9b7b25e770544eb8713d1f19cef0ce2);
         
     
 
-                var icon_8572a296c10d4b41a3c733f7c14012ee = L.AwesomeMarkers.icon({
+                var icon_d3628978438c47b3a74f5376d7b45c0e = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_0756d241ca2a4742bc2adfc278a0cb13.setIcon(icon_8572a296c10d4b41a3c733f7c14012ee);
+                marker_3d1132ac946c4fec826995ea607baf08.setIcon(icon_d3628978438c47b3a74f5376d7b45c0e);
             
     
-            var popup_be2ed9596fce45e2b063bdec362135c8 = L.popup({maxWidth: '280'
+            var popup_9b7bbb6a23594a8c8020a551401519dc = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_6a5a7c0035804e75880ec5282a39c3ef = $(`<div id="html_6a5a7c0035804e75880ec5282a39c3ef" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Kaufhaus Dedic</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
-                popup_be2ed9596fce45e2b063bdec362135c8.setContent(html_6a5a7c0035804e75880ec5282a39c3ef);
+                var html_63da67e3082c436a9c26b69be44d9893 = $(`<div id="html_63da67e3082c436a9c26b69be44d9893" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Kaufhaus Dedic</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
+                popup_9b7bbb6a23594a8c8020a551401519dc.setContent(html_63da67e3082c436a9c26b69be44d9893);
             
 
-            marker_0756d241ca2a4742bc2adfc278a0cb13.bindPopup(popup_be2ed9596fce45e2b063bdec362135c8)
+            marker_3d1132ac946c4fec826995ea607baf08.bindPopup(popup_9b7bbb6a23594a8c8020a551401519dc)
             ;
 
             
         
     
-        marker_0756d241ca2a4742bc2adfc278a0cb13.bindTooltip(
+        marker_3d1132ac946c4fec826995ea607baf08.bindTooltip(
             `<div>`
             + `Kaufhaus Dedic` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_bb2de071ec2b4644b36e2b6102c516ba = L.marker(
+        var marker_69f4c5e9838f406cb7370e7b25af8be9 = L.marker(
             [48.03706538099299, 14.418035322113395],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_38f5c2959aba4c8580f805f19122f2ee);
+            ).addTo(feature_group_e9b7b25e770544eb8713d1f19cef0ce2);
         
     
 
-                var icon_eb07e71807ac4420a36976da9d7a7259 = L.AwesomeMarkers.icon({
+                var icon_244fa0fc0e8e43a0845319c6869e0516 = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_bb2de071ec2b4644b36e2b6102c516ba.setIcon(icon_eb07e71807ac4420a36976da9d7a7259);
+                marker_69f4c5e9838f406cb7370e7b25af8be9.setIcon(icon_244fa0fc0e8e43a0845319c6869e0516);
             
     
-            var popup_f194b626429a4f9791838121368a2c44 = L.popup({maxWidth: '280'
+            var popup_69e182f5fcb14a0b92628e8ed5dc4e98 = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_b83610a179374f5e820d96a2f2d32231 = $(`<div id="html_b83610a179374f5e820d96a2f2d32231" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vereinslokal Wipplinger</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
-                popup_f194b626429a4f9791838121368a2c44.setContent(html_b83610a179374f5e820d96a2f2d32231);
+                var html_98cc55a7a7e64269933201658315fa77 = $(`<div id="html_98cc55a7a7e64269933201658315fa77" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Vereinslokal Wipplinger</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
+                popup_69e182f5fcb14a0b92628e8ed5dc4e98.setContent(html_98cc55a7a7e64269933201658315fa77);
             
 
-            marker_bb2de071ec2b4644b36e2b6102c516ba.bindPopup(popup_f194b626429a4f9791838121368a2c44)
+            marker_69f4c5e9838f406cb7370e7b25af8be9.bindPopup(popup_69e182f5fcb14a0b92628e8ed5dc4e98)
             ;
 
             
         
     
-        marker_bb2de071ec2b4644b36e2b6102c516ba.bindTooltip(
+        marker_69f4c5e9838f406cb7370e7b25af8be9.bindTooltip(
             `<div>`
             + `Vereinslokal Wipplinger` + `</div>`,
             {"sticky": true}
         );
         
     
-        var marker_4f27a3cc94d345d28505f97ae0004f69 = L.marker(
+        var marker_4d5ee714cb9547fd85bd24c8aa0b7f5f = L.marker(
             [48.035933846716944, 14.41390580869531],
             {
                 icon: new L.Icon.Default(),
                 }
-            ).addTo(feature_group_38f5c2959aba4c8580f805f19122f2ee);
+            ).addTo(feature_group_e9b7b25e770544eb8713d1f19cef0ce2);
         
     
 
-                var icon_7d428c31bb7e47ea9a86a39bda61287c = L.AwesomeMarkers.icon({
+                var icon_96ba4fcb31b04ddd8d047cf6895389e3 = L.AwesomeMarkers.icon({
                     icon: 'futbol-o',
                     iconColor: 'white',
                     markerColor: '#d90000',
                     prefix: 'fa',
                     extraClasses: 'fa-rotate-0'
                     });
-                marker_4f27a3cc94d345d28505f97ae0004f69.setIcon(icon_7d428c31bb7e47ea9a86a39bda61287c);
+                marker_4d5ee714cb9547fd85bd24c8aa0b7f5f.setIcon(icon_96ba4fcb31b04ddd8d047cf6895389e3);
             
     
-            var popup_66e55f407cb442e78614dba14bfcde23 = L.popup({maxWidth: '280'
+            var popup_b84a7911d1844925a069bf24428ff506 = L.popup({maxWidth: '280'
             
             });
 
             
-                var html_3b27be5a03c84260bf8c17fd5172af3f = $(`<div id="html_3b27be5a03c84260bf8c17fd5172af3f" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Casino-Saal</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
-                popup_66e55f407cb442e78614dba14bfcde23.setContent(html_3b27be5a03c84260bf8c17fd5172af3f);
+                var html_ced5094b56ef418d8adda470b158ac03 = $(`<div id="html_ced5094b56ef418d8adda470b158ac03" style="width: 100.0%; height: 100.0%;">      <!doctype html>     <html>     <h1>Casino-Saal</h1>     <iframe width="284" height="184" src='data/photos/fixme.jpg'      frameborder="0"></iframe>     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>     </html></div>`)[0];
+                popup_b84a7911d1844925a069bf24428ff506.setContent(html_ced5094b56ef418d8adda470b158ac03);
             
 
-            marker_4f27a3cc94d345d28505f97ae0004f69.bindPopup(popup_66e55f407cb442e78614dba14bfcde23)
+            marker_4d5ee714cb9547fd85bd24c8aa0b7f5f.bindPopup(popup_b84a7911d1844925a069bf24428ff506)
             ;
 
             
         
     
-        marker_4f27a3cc94d345d28505f97ae0004f69.bindTooltip(
+        marker_4d5ee714cb9547fd85bd24c8aa0b7f5f.bindTooltip(
             `<div>`
             + `Casino-Saal` + `</div>`,
             {"sticky": true}
         );
         
     
-            var layer_control_8e2c3c0c10d046f4b9b6b1cc3fc1db87 = {
-                base_layers : { "Basiskarte" : tile_layer_e3cd9aa530b446c6bc092c3ea697305f, },
-                overlays : { "Spielstätten" : geo_json_9cd5be51b8c14b4ab70636f4312c9af4,"Rundgänge" : feature_group_23d1d2a2422547909b09e8eebae10d53,"Stationen" : feature_group_38f5c2959aba4c8580f805f19122f2ee, }
+            var layer_control_99bef2cf77c4450490fe4337bb9db82c = {
+                base_layers : { "Basiskarte" : tile_layer_1152725026e84db4bfdfbf46eb6e4297, },
+                overlays : { "Spielstätten" : geo_json_25bf0d2179b9403f97718a7e67dc27be,"Rundgänge" : feature_group_af7d24a576414764b8c59d6cfa77cf14,"Stationen" : feature_group_e9b7b25e770544eb8713d1f19cef0ce2, }
                 };
             L.control.layers(
-                layer_control_8e2c3c0c10d046f4b9b6b1cc3fc1db87.base_layers,
-                layer_control_8e2c3c0c10d046f4b9b6b1cc3fc1db87.overlays,
+                layer_control_99bef2cf77c4450490fe4337bb9db82c.base_layers,
+                layer_control_99bef2cf77c4450490fe4337bb9db82c.overlays,
                 {position: 'topright',
                  collapsed: true,
                  autoZIndex: true
-                }).addTo(map_d0079f9d9ec1426d8025a8c6d3c78bc5);
+                }).addTo(map_fa2400a123244e9abb2b96c9360b8950);
             
-                geo_json_9cd5be51b8c14b4ab70636f4312c9af4.remove();
+                geo_json_25bf0d2179b9403f97718a7e67dc27be.remove();
         
 </script>

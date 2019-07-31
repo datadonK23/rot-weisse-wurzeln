@@ -78,7 +78,8 @@ folium.GeoJson(
 fg_walks: FeatureGroup = FeatureGroup(name="Rundgänge", show=True)
 
 for walk_id, walk_coords in walks.items():
-    loc: list = walk_coords
+    # Walk feature
+    loc: List[List[float]] = walk_coords
 
     folium.PolyLine(
         locations=loc,
@@ -87,6 +88,19 @@ for walk_id, walk_coords in walks.items():
         weight=6,
         opacity=0.75,
         smooth_factor=1,
+    ).add_to(fg_walks)
+
+    # Start of walk
+    start_loc: List[float] = loc[0]
+
+    folium.RegularPolygonMarker(
+        location=start_loc,
+        number_of_sides=3,
+        color="#d90000",
+        fill_color="#d90000",
+        fill_opacity=1,
+        rotation=195,
+        radius=12
     ).add_to(fg_walks)
 
 fg_walks.add_to(map)

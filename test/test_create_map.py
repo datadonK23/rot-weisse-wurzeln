@@ -11,7 +11,7 @@ import hypothesis.strategies as st
 
 import geopandas as gpd
 
-from create_map import map_center, loc, points_gdf, grounds_ref, get_info
+from create_map import map_center, loc, points_gdf, grounds_ref, get_info, walks
 
 
 class TestLocation(unittest.TestCase):
@@ -42,7 +42,7 @@ class TestPointData(unittest.TestCase):
         self.data = points_gdf
 
     def test_size(self):
-        self.assertEqual(self.data.shape[0], 10,
+        self.assertEqual(self.data.shape[0], 9,
                          "Incorrect number of rows in point GDF")
         self.assertEqual(self.data.shape[1], 5,
                          "Incorrect number of cols in point GDF")
@@ -67,7 +67,7 @@ class TestGroundsData(unittest.TestCase):
         self.data = gpd.read_file(grounds_ref)
 
     def test_size(self):
-        self.assertEqual(self.data.shape[0], 2, #FIXME 3
+        self.assertEqual(self.data.shape[0], 5,
                          "Incorrect number of rows in grounds GEOJSON")
         self.assertEqual(self.data.shape[1], 3,
                          "Incorrect number of cols in grounds GEOJSON")
@@ -86,6 +86,37 @@ class TestGroundsData(unittest.TestCase):
         data = points_gdf
         self.assertIsInstance(data.geometry, gpd.GeoSeries,
                               "Invalid geometry in grounds GEOJSON")
+
+
+class TestWalksData(unittest.TestCase):
+    def setUp(self):
+        self.data = walks
+
+    def test_size(self):
+        self.assertTrue(bool(self.data), "Walks dict is empty")
+        self.assertEqual(len(self.data), 1,
+                         "Incorrect number of items in walks data")
+
+    def test_empty_fields(self):
+        for k, v in self.data.items():
+            self.assertTrue(k, "Walks name is empty")
+            self.assertTrue(v, "Walks coords are empty")
+
+    def test_line_coords(self):
+        for _, v in self.data.items():
+            self.assertGreaterEqual(len(v), 10,
+                                    "Walks line consists of <10 points")
+            for coords in v:
+                lat = coords[1]
+                lon = coords[0]
+                self.assertGreaterEqual(lat, 14.3,
+                                        "Point in walks out of lat region")
+                self.assertLessEqual(lat, 14.6,
+                                        "Point in walks out of lat region")
+                self.assertGreaterEqual(lon, 47.99,
+                                        "Point in walks out of lon region")
+                self.assertLessEqual(lon, 48.1,
+                                     "Point in walks out of lon region")
 
 
 class TestGetInfo(unittest.TestCase):
