@@ -9,9 +9,7 @@ import unittest
 from hypothesis import given
 import hypothesis.strategies as st
 
-import geopandas as gpd
-
-from create_map import map_center, loc, points_gdf, grounds_ref, get_info, walks
+from create_map import map_center, loc, get_info
 
 
 class TestLocation(unittest.TestCase):
@@ -37,125 +35,55 @@ class TestLocation(unittest.TestCase):
                         "Long of map center not within city boundaries")
 
 
-class TestPointData(unittest.TestCase):
-    def setUp(self):
-        self.data = points_gdf
-
-    def test_size(self):
-        self.assertEqual(self.data.shape[0], 9,
-                         "Incorrect number of rows in point GDF")
-        self.assertEqual(self.data.shape[1], 5,
-                         "Incorrect number of cols in point GDF")
-
-    def test_columns(self):
-        exp_cols = ["id", "name", "photo_url", "text", "geometry"]
-        cols = list(self.data.columns.values)
-        self.assertEqual(cols, exp_cols,
-                         "Incorrect column names in point GDF")
-
-    def test_empty_fields(self):
-        self.assertEqual(self.data.isna().sum().sum(), 0,
-                         "There are missing empty fields in point GDF")
-
-    def test_geometry(self):
-        self.assertIsInstance(self.data.geometry, gpd.GeoSeries,
-                              "Point GDF geometry type is not a GeoSeries")
-
-
-class TestGroundsData(unittest.TestCase):
-    def setUp(self):
-        self.data = gpd.read_file(grounds_ref)
-
-    def test_size(self):
-        self.assertEqual(self.data.shape[0], 5,
-                         "Incorrect number of rows in grounds GEOJSON")
-        self.assertEqual(self.data.shape[1], 3,
-                         "Incorrect number of cols in grounds GEOJSON")
-
-    def test_columns(self):
-        exp_cols = ["id", "name", "geometry"]
-        cols = list(self.data.columns.values)
-        self.assertEqual(cols, exp_cols,
-                         "Incorrect column names in grounds GEOJSON")
-
-    def test_empty_fields(self):
-        self.assertEqual(self.data.isna().sum().sum(), 0,
-                         "There are missing empty fields in grounds GEOJSON")
-
-    def test_geometry(self):
-        data = points_gdf
-        self.assertIsInstance(data.geometry, gpd.GeoSeries,
-                              "Invalid geometry in grounds GEOJSON")
-
-
-class TestWalksData(unittest.TestCase):
-    def setUp(self):
-        self.data = walks
-
-    def test_size(self):
-        self.assertTrue(bool(self.data), "Walks dict is empty")
-        self.assertEqual(len(self.data), 1,
-                         "Incorrect number of items in walks data")
-
-    def test_empty_fields(self):
-        for k, v in self.data.items():
-            self.assertTrue(k, "Walks name is empty")
-            self.assertTrue(v, "Walks coords are empty")
-
-    def test_line_coords(self):
-        for _, v in self.data.items():
-            self.assertGreaterEqual(len(v), 10,
-                                    "Walks line consists of <10 points")
-            for coords in v:
-                lat = coords[1]
-                lon = coords[0]
-                self.assertGreaterEqual(lat, 14.3,
-                                        "Point in walks out of lat region")
-                self.assertLessEqual(lat, 14.6,
-                                        "Point in walks out of lat region")
-                self.assertGreaterEqual(lon, 47.99,
-                                        "Point in walks out of lon region")
-                self.assertLessEqual(lon, 48.1,
-                                     "Point in walks out of lon region")
-
-
 class TestGetInfo(unittest.TestCase):
     def test_is_html(self):
-        info = get_info("title", "descr", "url.jpg")
+        info = get_info("title", "descr", "url.jpg", "https://example.com/")
         self.assertIn("<html>", info, "No html start tag in info")
         self.assertIn("</html>", info, "No html closing tag in info")
 
     @given(test_title=st.text(max_size=40))
     def test_contains_title(self, test_title):
-        info = get_info(test_title, "descr", "url.png")
+        info = get_info(test_title, "descr", "url.png", "https://example.com/")
         self.assertIn("<h1>" + test_title + "</h1>", info,
                       "Test tile not in info")
 
     @given(test_descr=st.text(max_size=1000))
     def test_contains_description(self, test_descr):
-        info = get_info("title", test_descr, "url.jpg")
+        info = get_info("title", test_descr, "url.jpg", "https://example.com/")
         self.assertIn("<p>" + test_descr + "</p>", info,
                       "Test description not in info")
 
-    def test_contains_url(self):
+    def test_contains_photo_url(self):
         test_url = "data\/photos\/v_platz.jpg"
-        info = get_info("title", "descr", test_url)
+        info = get_info("title", "descr", test_url, "https://example.com/")
         self.assertIn("src='" + test_url + "'", info,
+                      "Test photo URL not in info")
+
+    def test_contains_url(self):
+        test_url = "https://example.com/"
+        info = get_info("title", "descr", "photo_url.png", test_url)
+        self.assertIn("window.open('" + test_url + "'", info,
                       "Test URL not in info")
 
     @given(test_title=st.text(min_size=41))
     def test_max_len_title(self, test_title):
-        self.assertRaises(ValueError, get_info, test_title, "descr", "url.png")
+        self.assertRaises(ValueError, get_info, test_title, "descr",
+                          "url.png", "https://example.com/")
 
     def test_max_len_description(self):
         long_descr = "a" * 1001
-        self.assertRaises(ValueError, get_info, "title", long_descr, "url.png")
+        self.assertRaises(ValueError, get_info, "title", long_descr,
+                          "url.png", "https://example.com/")
 
-    def test_format_url(self):
+    def test_url_validation(self):
         self.assertRaises(ValueError, get_info, "title", "descr",
-                          "data\/photos\/v_platz.txt")
+                          "data\/photos\/v_platz.txt", "https://example.com/")
         self.assertRaises(ValueError, get_info, "title", "descr",
-                          "data\/photos\/v_platzjpg")
+                          "data\/photos\/v_platzjpg", "https://example.com/")
+        self.assertRaises(ValueError, get_info, "title", "descr",
+                          "data\/photos\/v_platz.jpg", "https:// example.com/")
+        self.assertRaises(ValueError, get_info, "title", "descr",
+                          "data\/photos\/v_platz.jpg", "https/example.com/")
 
 
 if __name__ == '__main__':
